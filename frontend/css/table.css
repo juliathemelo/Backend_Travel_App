@@ -1,0 +1,45 @@
+.tabela h2 {
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+#tabela-lista {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#tabela-lista td,
+#tabela-lista th {
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+#tabela-lista tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabela-lista tr:hover {
+    background-color: #b382ba;
+}
+
+#tabela-lista th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #7e459b;
+    color: white;
+}
+
+#tabela-lista tr td:last-child {
+    background-color: #ffcc00;
+}

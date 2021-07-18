@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{ON}bus Viagens</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/table.css" />
+</head>
+
+<body>
+    <nav class="topbar">
+
+        <div>
+            <ul class="topbar__menu">
+                <li><a href="#sobre" class="topbar__menu__item">Sobre</a></li>
+                <li><a href="#consultoria" class="topbar__menu__item">Roteiros e consultoria</a></li>
+                <li><a href="#viagens" class="topbar__menu__item">Viagens</a></li>
+                <li><a href="#contato" class="topbar__menu__item">Contato</a></li>
+                <li><a href="#comprar" class="topbar__call-to-action">Quero agora!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="cabecalho" class="cabecalho">
+        <div class="cabecalho__container">
+            <h1 class="cabecalho__titulo"> {ON}bus</h1>
+            <p class="cabecalho__descricao">Precisa de uma viagem tranquila e segura? Aqui você encontra! <strong>Selecionamos tudo para garantir uma ótima viagem para você</strong></p>
+            <button href="#" class="cabecalho__call-to-action">Experimentar agora</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="sobre">
+            <div class="sobre__card">
+                <!-- <img src="assets/sobre-01.png" alt="Glogo terrestre com destino marcado por ícone"> -->
+
+                <h2>O que é a <strong>{ON}bus?</strong></h2>
+                <p>É um serviço de <strong>qualidade</strong> para suas viagens. Somos especializados em entender nossos clientes e montar o roteiro levando em consideração o seu perfil, quem vai com você, seu orçamento e outras informações relevantes!</p>
+
+            </div>
+        </section>
+
+        <section id="consultoria" class="servicos">
+            <h2>Nossos Serviços</h2>
+            <div>
+                <div class="servicos__card">
+                    <h3>Consultoria</h3>
+                    <img src="assets/servicos-consultoria.png" alt="Ilustração de um satélite">
+                    <p>A consultoria te ajuda a achar as melhores viagens e datas, de acordo com seu orçamento.</p>
+                </div>
+
+                <div class="servicos__card">
+                    <h3>Roteiro</h3>
+                    <img src="assets/servicos-roteiros.png" alt="Ilustração um ônibus espacial">
+                    <p>Qual assento escolher no ônibus? Quantas paradas na viagem? Qual melhor data de partida? No roteiro a gente te ajuda a descobrir.
+                        <p>
+                </div>
+            </div>
+        </section>
+
+        <section id="viagens" class="tabela">
+            <h2>Confira algumas viagens disponíveis</h2>
+            <table id="tabela-lista">
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Origem</th>
+                        <th>Hora Partida</th>
+                        <th>Previsão Chegada</th>
+                        <th>Número Passageiros</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabela-lista-corpo"></tbody>
+            </table>
+        </section>
+
+        <section id="contato" class="contato">
+            <h4>Alguma dúvida?</h4>
+            <h3>Fale com a gente!</h3>
+
+            <div>
+                <form action="" method="POST">
+                    <div class="contato__cliente">
+                        <div class="contato__dados">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome">
+                        </div>
+                        <div class="contato__dados">
+                            <label for="email">Email</label>
+                            <input type="email" name="email">
+                        </div>
+                    </div>
+                    <div class="contato__messagem">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" name="assunto">
+                    </div>
+                    <div class="contato__messagem">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" cols="30" rows="10"></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" class="contato__enviar">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <div class="footer__mapa">
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Como funciona</a></li>
+                    <li><a href="#">Roteiros</a></li>
+                    <li><a href="#">Consultoria</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__brand">
+                <p><span>Living the high</span></p>
+                <a href="mailto:contato@gruppe.com">contato@onbusviagens.com</a>
+                <p>© Copyright 2019. {On}bus Viagens</p>
+            </div>
+
+            <div class="footer__redes">
+                <p>Siga-nos nas redes sociais:</p>
+                <div>
+                    <a href="#"><img src="assets/fb-icon.png" alt="Ícone do Facebook"></a>
+                    <a href="#"><img src="assets/yt-icon.png" alt="ícone do Youtube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
