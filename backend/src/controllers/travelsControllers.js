@@ -124,40 +124,37 @@ const createNewDriver = (req,res) => {
     })
 }
 
-const EditDriver = (req,res) => {
+const editDriver = (req,res) => {
     let requestIdTravel = req.params.id
-    let requestIdDriver = req.params.idD
-    let {name, license} = req.body
+    let {id, name, license} = req.body
 
-    const newDriver = {
-        id: Math.random().toString(32).substr(2),
+    let TravelFilter = utils.findById(travels,requestIdTravel)
+
+    const index = travels.indexOf(TravelFilter)
+
+    const updateDriver = {
+        id,
         name,
         license
     }
 
-    let TravelFilter = utils.findById(travels,requestIdDriver)
-
-    travels.forEach((travel) => {
-        let sameTravel = travel == TravelFilter
-
-        if(sameTravel){
-            travel.driverInfos = []
-            travel.driverInfos.push(newDriver)
-        }
-
-    })
-
-    fs.writeFile("./src/models/travels.json", JSON.stringify(travels), 'utf8', function(err){
-        if(err){
-            res.status(500).send({
-                "message": err
-            })
-        } else{
-            res.status(201).send({
-                "message": "Motorista atualizado com sucesso", TravelFilter
-            })
-        }
-    })
+    if (index >= 0) {
+        travels.splice(index,1,updateDriver)
+        fs.writeFile("./src/models/travels.json", JSON.stringify(travels), 'utf8', function(err){
+            if (err) {
+                res.status(500).send({message: err})
+            } 
+            else {
+                res.status(200).json([{
+                    "message": "Motorista substituido com sucesso",
+                    updatePassenger
+                }])
+            }
+        })
+    } 
+    else {
+        res.status(404).send({message: "Motorista não encontrado"})
+    }
 }
 
 const deleteTravel = (req,res) => {
@@ -190,5 +187,6 @@ module.exports = {
     createPeople,
     deletePerson,
     createNewDriver,
-    deleteTravel
+    deleteTravel,
+    editDriver
 }
